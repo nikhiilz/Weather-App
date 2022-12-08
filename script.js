@@ -44,15 +44,15 @@ let weatherofcity = (city2) => {
 		.then(response => {
 			console.log(response)
 			document.getElementsByClassName(city2)[0].innerHTML = response.cloud_pct
-			document.getElementsByClassName(city2)[1].innerHTML = response.temp
 			document.getElementsByClassName(city2)[2].innerHTML= response.feels_like
 			document.getElementsByClassName(city2)[3].innerHTML= response.humidity
-			document.getElementsByClassName(city2)[4].innerHTML= response.min_temp
 			document.getElementsByClassName(city2)[5].innerHTML= response.max_temp
-			document.getElementsByClassName(city2)[6].innerHTML= response.wind_speed
-			document.getElementsByClassName(city2)[7].innerHTML = response.wind_degrees
+			document.getElementsByClassName(city2)[4].innerHTML= response.min_temp
 			document.getElementsByClassName(city2)[8].innerHTML= response.sunrise
 			document.getElementsByClassName(city2)[9].innerHTML= response.sunset
+			document.getElementsByClassName(city2)[1].innerHTML = response.temp
+			document.getElementsByClassName(city2)[7].innerHTML = response.wind_degrees
+			document.getElementsByClassName(city2)[6].innerHTML= response.wind_speed
 
 			console.log("Your info for "+ city2 +" has been fetched successfully")
 		})
